@@ -1,4 +1,4 @@
-//First k distinct elements in the stream(array).
+//First k distinct elements in the stream(array)..
 
 #include<iostream>
 #include<map>
