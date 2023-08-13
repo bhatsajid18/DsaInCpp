@@ -17,6 +17,11 @@ class queue{
     }
 
     void push(int x){
+        if (front==0 && back==n-1 || back+1==front){ //or (back+1)%n==front
+            cout<<"Can't push to full queue.\n";
+            return;
+        }
+        
         if (back==n-1){
             back=0;
             arr[back]=x;
@@ -35,8 +40,13 @@ class queue{
             cout<<"No element to dequeue.\n";
             return;
         }
-        if (front==n-1)
-        {
+        if (front==back){
+            front=-1;
+            back=-1;
+            return;
+        }
+        
+        if (front==n-1){
             front=0;
             return;
         }
